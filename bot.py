@@ -789,7 +789,7 @@ def settings_callback(update: Update, context: CallbackContext) -> None:
                         current_value = settings.get(item)
                     else:
                         update.callback_query.answer('失败', show_alert=True)
-                if len(current_value) < 10:
+                if len(current_value) < 30:
                     buttons += [[InlineKeyboardButton(text="添加新项", callback_data = f"{' '.join(args[:2])} set")]]
                 for i in range(len(current_value)):
                     name = current_value[i][0]
